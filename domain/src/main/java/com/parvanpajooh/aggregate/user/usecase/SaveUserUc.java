@@ -7,10 +7,11 @@ import com.parvanpajooh.aggregate.user.repository.UserRepository;
 import com.parvanpajooh.aggregate.user.repository.dto.SaveUserDto;
 import com.parvanpajooh.aggregate.user.valueobject.Name;
 import com.parvanpajooh.aggregate.user.valueobject.TelegramUserId;
+import org.springframework.stereotype.Service;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
+@Service
 public class SaveUserUc implements CommandUseCase<SaveUserQry> {
     private static final Logger logger = Logger.getLogger(SaveUserUc.class.getName());
 
@@ -29,7 +30,7 @@ public class SaveUserUc implements CommandUseCase<SaveUserQry> {
             return Result.failure(new IllegalArgumentException("invalid name format"));
 
         } else if (telegramUserIdResult.isFailure()) {
-            logger.log(Level.WARNING, "Invalid name format: " + saveUserQry.name());
+            logger.log(Level.WARNING, "Invalid size of telegram id. at least 5 and maximum is 10 : " + saveUserQry.name().length() + " is not approval");
 
             return Result.failure(new IllegalArgumentException("invalid telegram userid Format format"));
         } else {
