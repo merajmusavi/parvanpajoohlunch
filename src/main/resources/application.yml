@@ -1,0 +1,21 @@
+server:
+  port: 3003
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5435/lunch
+    username: meraj
+    password: steven8
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: false
+
+
+
+  main:
+    web-application-type: SERVLET
