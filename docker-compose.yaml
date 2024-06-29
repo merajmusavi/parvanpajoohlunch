@@ -5,9 +5,8 @@ services:
     environment:
       POSTGRES_USER: meraj
       POSTGRES_PASSWORD: steven8
-      PGDATA: /data/postgres
     volumes:
-      - db:/data/postgres
+      - db:/var/lib/postgresql/data
     ports:
       - "5435:5432"
     networks:
