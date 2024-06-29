@@ -1,4 +1,4 @@
-package com.example.vanguard.parvanpajooh.controller;
+package com.example.vanguard.parvanpajooh.controller.user;
 
 import com.example.vanguard.parvanpajooh.response.ShowUserDto;
 import com.example.vanguard.parvanpajooh.service.UserService;
