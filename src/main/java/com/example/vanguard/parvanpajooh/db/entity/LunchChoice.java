@@ -16,11 +16,11 @@ public class LunchChoice {
 
     @ManyToOne
     @JoinColumn(name = "lunch_first_choice_id", nullable = false)
-    Launch firstChoice;
+    Lunch firstChoice;
 
     @ManyToOne
     @JoinColumn(name = "lunch_second_choice_id", nullable = false)
-    Launch secondChoice;
+    Lunch secondChoice;
 
     @Column(nullable = false)
     private LocalDate localDate;
@@ -41,19 +41,19 @@ public class LunchChoice {
         this.user = user;
     }
 
-    public Launch getFirstChoice() {
+    public Lunch getFirstChoice() {
         return firstChoice;
     }
 
-    public void setFirstChoice(Launch firstChoice) {
+    public void setFirstChoice(Lunch firstChoice) {
         this.firstChoice = firstChoice;
     }
 
-    public Launch getSecondChoice() {
+    public Lunch getSecondChoice() {
         return secondChoice;
     }
 
-    public void setSecondChoice(Launch secondChoice) {
+    public void setSecondChoice(Lunch secondChoice) {
         this.secondChoice = secondChoice;
     }
 

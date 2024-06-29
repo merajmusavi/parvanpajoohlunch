@@ -3,9 +3,13 @@ package com.example.vanguard.parvanpajooh.repository;
 import com.example.vanguard.parvanpajooh.db.entity.Users;
 import com.example.vanguard.parvanpajooh.db.entity.jpa.UserJpa;
 import com.example.vanguard.parvanpajooh.mapper.UserMapper;
+import com.parvanpajooh.aggregate.user.User;
 import com.parvanpajooh.aggregate.user.repository.UserRepository;
 import com.parvanpajooh.aggregate.user.repository.dto.SaveUserDto;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class UserRepositoryImpl implements UserRepository {
@@ -20,5 +24,16 @@ public class UserRepositoryImpl implements UserRepository {
     public void save(SaveUserDto saveUserDto) {
         Users user = UserMapper.mapDtoToEntity(saveUserDto);
         userJpa.save(user);
+    }
+
+    @Override
+    public List<User> findAll() {
+        List<Users> all = userJpa.findAll();
+        List<User> users = new ArrayList<>();
+        for (Users user : all) {
+            users.add(UserMapper.mapToUser(user));
+        }
+        return users;
+
     }
 }

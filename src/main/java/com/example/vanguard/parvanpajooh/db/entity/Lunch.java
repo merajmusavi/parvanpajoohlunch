@@ -3,7 +3,7 @@ package com.example.vanguard.parvanpajooh.db.entity;
 import jakarta.persistence.*;
 
 @Entity
-public class Launch {
+public class Lunch {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

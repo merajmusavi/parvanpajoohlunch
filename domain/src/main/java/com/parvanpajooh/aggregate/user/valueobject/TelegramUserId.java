@@ -2,7 +2,7 @@ package com.parvanpajooh.aggregate.user.valueobject;
 
 import com.parvanpajooh.aggregate.common.Result;
 
-public record TelegramUserId(String telegramUserId) {
+public record TelegramUserId(String value) {
 
     public static Result<TelegramUserId> makeNew(String telegramUserId) {
         if (isValidTelegramUserId(telegramUserId)){

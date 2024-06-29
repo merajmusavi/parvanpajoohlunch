@@ -1,4 +1,4 @@
-package com.parvanpajooh.aggregate.user.usecase;
+package com.parvanpajooh.aggregate.user.usecase.cmd;
 
 import com.parvanpajooh.aggregate.common.CommandUseCase;
 import com.parvanpajooh.aggregate.common.Result;
