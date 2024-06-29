@@ -1,7 +1,7 @@
 package com.example.vanguard.parvanpajooh.controller.user;
 
 import com.example.vanguard.parvanpajooh.response.ShowUserDto;
-import com.example.vanguard.parvanpajooh.service.UserService;
+import com.example.vanguard.parvanpajooh.service.user.UserService;
 import com.parvanpajooh.aggregate.user.repository.dto.SaveUserDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

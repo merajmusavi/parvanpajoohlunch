@@ -1,4 +1,4 @@
-package com.example.vanguard.parvanpajooh.service;
+package com.example.vanguard.parvanpajooh.service.user;
 
 import com.example.vanguard.parvanpajooh.mapper.UserMapper;
 import com.example.vanguard.parvanpajooh.response.ShowUserDto;
