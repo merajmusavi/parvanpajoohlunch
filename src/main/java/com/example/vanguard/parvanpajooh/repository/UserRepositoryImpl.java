@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserRepositoryImpl implements UserRepository {
@@ -35,5 +36,11 @@ public class UserRepositoryImpl implements UserRepository {
         }
         return users;
 
+    }
+
+    @Override
+    public Boolean exists(Long userId) {
+        Optional<Users> foundedUser = userJpa.findById(userId);
+        return foundedUser.isPresent();
     }
 }

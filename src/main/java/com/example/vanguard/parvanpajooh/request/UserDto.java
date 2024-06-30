@@ -1,6 +1,6 @@
 package com.example.vanguard.parvanpajooh.request;
 
-public class User {
+public class UserDto {
     private String name;
     private String telegramUserId;
 

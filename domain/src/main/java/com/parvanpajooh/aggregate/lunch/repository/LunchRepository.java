@@ -4,4 +4,7 @@ import com.parvanpajooh.aggregate.lunch.Lunch;
 
 public interface LunchRepository {
     void save(Lunch lunch);
+
+    boolean exists(long lunchId);
+
 }

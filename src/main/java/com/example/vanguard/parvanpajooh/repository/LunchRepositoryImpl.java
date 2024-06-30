@@ -22,4 +22,9 @@ public class LunchRepositoryImpl implements LunchRepository {
         com.example.vanguard.parvanpajooh.db.entity.Lunch lunchEntity = LunchMapper.mapFromAggregateToEntity(lunch);
         lunchJpa.save(lunchEntity);
     }
+
+    @Override
+    public boolean exists(long lunchId) {
+        return lunchJpa.findById(lunchId).isPresent();
+    }
 }

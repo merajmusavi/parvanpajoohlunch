@@ -1,6 +1,6 @@
 package com.example.vanguard.parvanpajooh.request;
 
-public class Lunch {
+public class LunchDto {
     private String name;
 
     public String getName() {

@@ -9,4 +9,6 @@ public interface UserRepository {
     void save(SaveUserDto saveUserDto);
 
     List<User> findAll();
+
+    Boolean exists(Long userId);
 }
